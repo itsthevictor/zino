@@ -17,14 +17,8 @@ const Navbar = ({ authData }) => {
   return (
     <Wrapper>
       <div className={sideNav ? 'side-nav active' : 'side-nav'}>
+        <div className='nav-overlay'></div>
         <div className='nav-container'>
-          <div className='icon'>
-            <HiMiniXMark
-              className='burger-menu'
-              size={35}
-              onClick={() => setSideNav(false)}
-            />
-          </div>
           <Link
             className='nav-link'
             to='/services'
@@ -47,18 +41,23 @@ const Navbar = ({ authData }) => {
             {/* {user.firstName} */}
           </Link>
         </div>
-        <div className='nav-overlay'></div>
       </div>
       <nav>
-        {!sideNav && (
-          <div className='mobile-menu'>
+        <div className='mobile-menu'>
+          {!sideNav ? (
             <HiBars3
               className='burger-menu'
               size={30}
               onClick={() => setSideNav(!sideNav)}
             />
-          </div>
-        )}
+          ) : (
+            <HiMiniXMark
+              className='burger-menu'
+              size={30}
+              onClick={() => setSideNav(!sideNav)}
+            />
+          )}
+        </div>
 
         <div className='logo-container'>
           <h3 className='logo'>

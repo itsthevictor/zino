@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.section`
   border-bottom: 1px solid #dce0e6;
@@ -9,9 +9,11 @@ const Wrapper = styled.section`
     border: none !important;
     /* position: absolute; */
   }
+
   .side-nav {
     position: absolute;
     width: 100vw;
+    width: 100%;
     top: 0;
     /* height: 100%; */
     display: none;
@@ -20,41 +22,33 @@ const Wrapper = styled.section`
     .nav-container {
       position: relative;
       width: 250px;
-      left: -250px;
-      top: 0;
-      /* height: 100vh; */
+      left: 0;
+      /* top: var(--nav-height); */
+      height: 100vh;
+      padding-top: var(--nav-height);
       background-color: white;
       opacity: 1;
       transition: 0.5s ease;
       display: flex;
       flex-direction: column;
-      padding: 15px 20px;
+      padding-left: 15px;
       justify-content: flex-start;
       /* gap: 40px; */
-
-      .icon {
-        display: flex;
-        justify-content: flex-end;
-        margin-bottom: 15px;
-      }
 
       a {
         padding: 15px 0;
         color: #0d7a5f;
         /* border-bottom: 1px solid black; */
-        border-top: 1px solid #dce0e6;
-      }
-
-      :last-child {
-        border-bottom: 1px solid #dce0e6;
       }
     }
 
     .nav-overlay {
-      width: calc(100vw - 250px);
+      width: 100%;
       height: 100vh;
+      top: var(--nav-height);
+      left: 0;
       position: absolute;
-      left: 250px;
+
       background: black;
       opacity: 0.2;
       transition: 0.5s ease;
@@ -109,7 +103,7 @@ const Wrapper = styled.section`
         cursor: pointer;
         font-size: 1em;
         font-weight: 500;
-        font-family: "Inter", Arial, Helvetica, sans-serif;
+        font-family: 'Inter', Arial, Helvetica, sans-serif;
         margin-right: 15px;
       }
     }
