@@ -34,7 +34,7 @@ const Navbar = ({ authData }) => {
             Sign up / Login
           </Link>
           <Link className='link-btn' to='adauga-anunt'>
-            Listează un curs
+            Listează o aventură
           </Link>
 
           <Link className='link-btn' to='account'>
@@ -77,7 +77,7 @@ const Navbar = ({ authData }) => {
           )}
 
           <Link className='link-btn' to='adauga-anunt'>
-            Listează un curs
+            Listează o aventură
           </Link>
         </div>
       </nav>
