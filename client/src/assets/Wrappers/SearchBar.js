@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.section`
   .search-bar-container {
@@ -10,7 +10,7 @@ const Wrapper = styled.section`
     align-items: center;
     justify-content: center;
     /* background-image: url("/lego.jpg") */
-    background-image: url("https://res.cloudinary.com/dgp67jheg/image/upload/v1716456370/junior%20markt/artisan_gdictl.webp");
+    background-image: url('https://res.cloudinary.com/dgp67jheg/image/upload/v1743849439/zino/frederick-shaw-84zCwKNkGIg-unsplash_e9k75u.jpg');
 
     /* background: chartreuse; */
     background-repeat: no-repeat;

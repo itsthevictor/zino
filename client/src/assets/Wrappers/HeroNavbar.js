@@ -135,6 +135,9 @@ const Wrapper = styled.section`
   @media (max-width: 800px) {
     nav {
       justify-content: center;
+      .side-nav .active {
+        display: none;
+      }
       .menu {
         display: none;
       }
