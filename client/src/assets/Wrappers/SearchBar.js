@@ -10,7 +10,7 @@ const Wrapper = styled.section`
     align-items: center;
     justify-content: center;
     /* background-image: url("/lego.jpg") */
-    background-image: url('https://res.cloudinary.com/dgp67jheg/image/upload/v1743849439/zino/frederick-shaw-84zCwKNkGIg-unsplash_e9k75u.jpg');
+    /* background-image: url('https://res.cloudinary.com/dgp67jheg/image/upload/v1743849439/zino/frederick-shaw-84zCwKNkGIg-unsplash_e9k75u.jpg'); */
 
     /* background: chartreuse; */
     background-repeat: no-repeat;
