@@ -1,22 +1,14 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.section`
+  height: 100vh;
+  width: 100%;
   border-bottom: 1px solid #dce0e6;
   font-weight: 300;
-
-  nav {
-    width: var(--fluid-width);
-    max-width: var(--max-width);
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-  }
-  .menu {
-    display: flex;
-    gap: 40px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 export default Wrapper;
