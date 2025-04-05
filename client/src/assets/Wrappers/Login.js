@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Wrapper = styled.section`
   .container {
@@ -6,7 +6,7 @@ const Wrapper = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("https://res.cloudinary.com/dgp67jheg/image/upload/v1716456258/junior%20markt/play_sjdrap.jpg");
+    background-image: url('https://res.cloudinary.com/dgp67jheg/image/upload/v1716456258/junior%20markt/play_sjdrap.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -22,7 +22,7 @@ const Wrapper = styled.section`
       border-radius: var(--round-lg);
       padding: 40px;
       gap: 20px;
-      box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+      box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 
       h3 {
         font-size: var(--fs-500);
@@ -39,24 +39,24 @@ const Wrapper = styled.section`
         label {
           font-size: 12px;
           text-align: left;
-          margin-bottom: 10px;
+          margin-bottom: 5px;
           font-weight: 600;
-          text-transform:capitalize;
+          text-transform: capitalize;
         }
 
-        input, select, option {
+        input,
+        select,
+        option {
           padding: 15px 20px;
           width: 100%;
           border-radius: var(--round-sm);
           outline: none;
           border: 1px solid grey;
         }
-
-        input[type='select']
       }
       .submit-btn {
         border-radius: 45px;
-        text-align:center;
+        text-align: center;
       }
       a {
         color: hsl(var(--accent));

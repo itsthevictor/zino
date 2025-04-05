@@ -7,13 +7,15 @@ import DashboardLayout from './layouts/DashboardLayout';
 import Main, { initialLoader } from './layouts/Main';
 import Error from './pages/Error';
 import 'react-toastify/dist/ReactToastify.css';
-import AddTask, { addTaskAction } from './pages/AddTask';
 
 import Classes, { classesLoader } from './pages/Classes';
 import { searchAction } from './actions/search';
 import ListingPage, { singleListingLoader } from './pages/ListingPage';
 import AddListing from './pages/AddListing';
 import Gallery from './pages/Gallery';
+import OrganizerPage from './pages/OrganizerPage';
+import Account from './pages/Account';
+import Checkout from './pages/Checkout';
 function App() {
   const router = createBrowserRouter([
     {
@@ -43,13 +45,13 @@ function App() {
           loader: singleListingLoader,
         },
         {
-          path: 'register',
+          path: 'signup',
           element: <Register />,
           errorElement: <Error />,
           action: registerAction,
         },
         {
-          path: 'login',
+          path: 'signin',
           element: <Login />,
           errorElement: <Error />,
           action: loginAction,
@@ -68,16 +70,16 @@ function App() {
           errorElement: <Error />,
         },
         {
-          path: 'add-task',
-          element: <AddTask />,
-          action: addTaskAction,
-          errorElement: <Error />,
+          path: 'organizer/:id',
+          element: <OrganizerPage />,
         },
         {
-          path: 'add-gallery',
-          element: <Gallery />,
-
-          errorElement: <Error />,
+          path: 'my-account',
+          element: <Account />,
+        },
+        {
+          path: 'checkout/:id',
+          element: <Checkout />,
         },
       ],
     },

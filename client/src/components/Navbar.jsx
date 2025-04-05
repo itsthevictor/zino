@@ -4,6 +4,7 @@ import { HiBars3, HiMiniXMark, HiMiniUserCircle } from 'react-icons/hi2';
 import { useState } from 'react';
 import { mainFetch } from '../utils/customFetch';
 import { FaUser } from 'react-icons/fa6';
+import Logo from './Logo';
 
 const Navbar = ({ authData }) => {
   const [sideNav, setSideNav] = useState(false);
@@ -28,7 +29,7 @@ const Navbar = ({ authData }) => {
           </Link>
           <Link
             className='nav-link'
-            to='login'
+            to='signin'
             onClick={() => setSideNav(!sideNav)}
           >
             Sign up / Login
@@ -61,7 +62,9 @@ const Navbar = ({ authData }) => {
 
         <div className='logo-container'>
           <h3 className='logo'>
-            <Link to='/'>zino</Link>
+            <Link to='/'>
+              <Logo />
+            </Link>
           </h3>
         </div>
         <div className='menu'>
@@ -70,9 +73,9 @@ const Navbar = ({ authData }) => {
               Sign out
             </button>
           ) : (
-            <Link className='nav-link user-link' to='login'>
+            <Link className='nav-link user-link' to='signin'>
               <FaUser className='user-icon' size={15} />
-              <span>Contul tău</span>
+              <span>Sign In</span>
             </Link>
           )}
 

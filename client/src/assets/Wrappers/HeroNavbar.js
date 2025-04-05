@@ -20,7 +20,7 @@ const Wrapper = styled.section`
     transition: var(--transition);
 
     .nav-container {
-      position: relative;
+      position: fixed;
       width: 250px;
       left: 0;
       /* top: var(--nav-height); */
