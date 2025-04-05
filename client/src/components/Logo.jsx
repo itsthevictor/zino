@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Logo = () => {
-  return <div>ZINO</div>;
+  return <h1>ZINO</h1>;
 };
 
 export default Logo;

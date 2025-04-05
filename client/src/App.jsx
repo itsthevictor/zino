@@ -16,6 +16,7 @@ import Gallery from './pages/Gallery';
 import OrganizerPage from './pages/OrganizerPage';
 import Account from './pages/Account';
 import Checkout from './pages/Checkout';
+import Success from './pages/Success';
 function App() {
   const router = createBrowserRouter([
     {
@@ -80,6 +81,10 @@ function App() {
         {
           path: 'checkout/:id',
           element: <Checkout />,
+        },
+        {
+          path: 'success',
+          element: <Success />,
         },
       ],
     },

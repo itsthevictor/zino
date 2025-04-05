@@ -74,10 +74,13 @@ const Wrapper = styled.section`
     .mobile-menu {
       display: none;
     }
-    .logo {
+    .logo h1 {
       color: hsl(var(--accent-logo));
       font-size: var(--fs-500);
-      font-weight: 500;
+      font-weight: 900;
+      font-style: italic;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: cornflowerblue;
     }
     .menu {
       display: flex;
