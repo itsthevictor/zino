@@ -74,13 +74,12 @@ const Navbar = ({ authData }) => {
             </button>
           ) : (
             <Link className='nav-link user-link' to='signin'>
-              <FaUser className='user-icon' size={15} />
-              <span>Sign In</span>
+              <span>my account</span>
             </Link>
           )}
 
           <Link className='link-btn' to='adauga-anunt'>
-            Listează o aventură
+            list and adventure
           </Link>
         </div>
       </nav>

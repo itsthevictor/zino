@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-  border-bottom: 1px solid #dce0e6;
-
+  /* background: transparent; */
+  /* background: chartreuse; */
+  z-index: 999;
   .burger-menu {
-    color: #0d7a5f;
+    color: white;
     cursor: pointer;
-    border: none !important;
     /* position: absolute; */
   }
 
@@ -24,9 +24,9 @@ const Wrapper = styled.section`
       width: 250px;
       left: 0;
       /* top: var(--nav-height); */
-      height: 100vh;
+      /* height: 100vh; */
       padding-top: var(--nav-height);
-      background-color: white;
+      background: transparent;
       opacity: 1;
       transition: 0.5s ease;
       display: flex;
@@ -49,7 +49,7 @@ const Wrapper = styled.section`
       left: 0;
       position: absolute;
 
-      background: black;
+      /* background: black; */
       opacity: 0.2;
       transition: 0.5s ease;
     }
@@ -61,26 +61,32 @@ const Wrapper = styled.section`
       }
     }
   }
+
   nav {
-    width: var(--fluid-width);
+    position: fixed;
+    top: 0.7rem;
+    left: 0rem;
+    padding: 0 2rem;
+    z-index: 999;
+    width: 100%;
     min-width: var(--max-width);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: var(--nav-height);
+    color: white;
+    font-size: 0.9em;
+
     /* box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.15); */
 
     .mobile-menu {
       display: none;
     }
     .logo h1 {
-      color: hsl(var(--accent-logo));
-      font-size: var(--fs-500);
-      font-weight: 900;
-      font-style: italic;
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: cornflowerblue;
+      color: white;
+      font-size: var(--fs-400);
+      font-weight: 700;
     }
     .menu {
       display: flex;
@@ -88,10 +94,9 @@ const Wrapper = styled.section`
       align-items: center;
 
       .link-btn {
-        color: #0d7a5f;
-        padding: 8px 25px;
-        border: 1px solid #0d7a5f;
-        border-radius: var(--round-md);
+        color: white;
+        /* padding: 8px 25px; */
+        /* border-radius: var(--round-md); */
         margin-left: -15px;
         font-weight: 600;
         &:hover {
@@ -104,7 +109,7 @@ const Wrapper = styled.section`
         border: none;
         outline: none;
         cursor: pointer;
-        font-size: 1em;
+        font-size: 0.8em;
         font-weight: 500;
         font-family: 'Inter', Arial, Helvetica, sans-serif;
         margin-right: 15px;

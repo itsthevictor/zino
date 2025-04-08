@@ -2,16 +2,21 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
   .search-bar-container {
-    height: calc(100vh - var(--nav-height));
-    width: 100%;
+    z-index: 9;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-image: url("/lego.jpg") */
-    /* background-image: url('https://res.cloudinary.com/dgp67jheg/image/upload/v1743849439/zino/frederick-shaw-84zCwKNkGIg-unsplash_e9k75u.jpg'); */
 
+    background: url('https://res.cloudinary.com/dgp67jheg/image/upload/v1744137696/zno/perspectiva-in-franta_scfoyg.jpg')
+      rgba(0, 0, 0, 0.2);
+    background-blend-mode: multiply;
     /* background: chartreuse; */
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,7 +24,7 @@ const Wrapper = styled.section`
   }
   .search-bar {
     display: flex;
-    border: 2px solid hsl(var(--accent));
+
     border-radius: var(--round-sm);
     background: white;
     margin-top: -3em;
@@ -48,7 +53,7 @@ const Wrapper = styled.section`
       padding: 10px 20px;
       font-size: 1.5em;
       border: none;
-      border-radius: 0 2px 2px 0;
+
       display: flex;
       align-items: center;
       justify-content: center;
