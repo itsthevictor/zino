@@ -10,21 +10,12 @@ import { Form } from 'react-router-dom';
 
 const SearchBar = () => {
   return (
-    <Wrapper>
-      <div className='search-bar-container'>
-        <div className='input'>
-          <input type='text' />
-        </div>
-        <Form method='post' className='search-bar' action='/search'>
-          <button type='submit'>
-            caută{' '}
-            <span>
-              <FaMagnifyingGlass size={24} />
-            </span>
-          </button>
-        </Form>
-      </div>
-    </Wrapper>
+    <div className='search-bar-container'>
+      <Form method='post' className='search-bar' action='/search'>
+        <input type='text' />
+        <button type='submit'>go</button>
+      </Form>
+    </div>
   );
 };
 export default SearchBar;
