@@ -64,10 +64,10 @@ const Home = () => {
       <span className='absolute right-76 bottom-7 text-xs uppercase'>
         {time}
       </span>
-      <span className='absolute right-0 rotate-90 capitalize text-xs  top-96'>
+      <span className='absolute right-0 rotate-90 capitalize text-xs  top-75'>
         {date}
       </span>
-      <span className='border-b-1 border-l-1 border-white absolute bottom-8 left-8 w-40 h-10'></span>
+      <span className='border-b-1 border-l-1 border-white absolute bottom-8 left-8 w-30 h-10'></span>
       <span className='border-r-1 border-white absolute bottom-8 right-8 w-10 h-50'></span>
     </div>
   );
