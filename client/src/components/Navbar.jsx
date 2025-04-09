@@ -17,18 +17,18 @@ const Navbar = ({ authData }) => {
   };
 
   return (
-    <nav className='flex justify-between  bg-transparent p-6 fixed top-0 left-0 right-0 z-50 text-white font-oxanium'>
-      <div>
+    <nav className='flex justify-between  bg-transparent p-8 fixed top-0 left-0 right-0 z-50 text-white font-oxanium'>
+      <div className='ml-1'>
         <Logo />
       </div>
       <div className='flex justify-between items-center'>
-        <div className='hidden md:flex gap-6 text-sm'>
+        <div className='hidden md:flex gap-12 text-sm'>
           <Link to='/'>home</Link>
           <Link to='/about'>about</Link>
           <Link to='/contact'>contact</Link>
           {authData?.user ? (
             <button
-              className='flex items-center gap-2'
+              className='flex items-center gap-4'
               onClick={handleLogoutBtn}
             >
               logout

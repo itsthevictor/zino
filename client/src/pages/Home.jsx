@@ -50,7 +50,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="grid place-items-center h-screen w-screen  p-6  font-oxanium text-white  bg-black/10  bg-[url('https://res.cloudinary.com/dgp67jheg/image/upload/v1744192852/zno/cropped_igdxfn.jpg')] bg-blend-overlay bg-cover bg-no-repeat bg-top  ">
+    <div className="grid place-items-center h-screen w-screen  p-8   font-oxanium text-white  bg-black/13  bg-[url('https://res.cloudinary.com/dgp67jheg/image/upload/v1744192852/zno/cropped_igdxfn.jpg')] bg-blend-overlay bg-cover bg-no-repeat bg-top  ">
       <div className='border-1 w-full h-full border-transparent flex flex-col items-center justify-center '>
         <div className='text-7xl  -mt-10 text-wrap text-center'>
           What are we <span className=' text-orange-500'>doing </span> <br />{' '}
@@ -58,17 +58,17 @@ const Home = () => {
         </div>
         <SearchBar />
       </div>
-      <span className='absolute left-0 rotate-270 -ml-11 text-xs'>
+      <span className='absolute left-0 rotate-270 -ml-9 text-xs'>
         {position.lat && position.lat}, {position.long && position.long}
       </span>
-      <span className='absolute right-55 bottom-5 text-xs uppercase'>
+      <span className='absolute right-76 bottom-7 text-xs uppercase'>
         {time}
       </span>
-      <span className='absolute right-0 rotate-90 capitalize text-xs -mr-2 top-96'>
+      <span className='absolute right-0 rotate-90 capitalize text-xs  top-96'>
         {date}
       </span>
-      <span className='border-b-1 border-l-1 border-white absolute bottom-6 left-6 w-40 h-10'></span>
-      <span className='border-b-1 border-r-1 border-white absolute bottom-6 right-6 w-10 h-50'></span>
+      <span className='border-b-1 border-l-1 border-white absolute bottom-8 left-8 w-40 h-10'></span>
+      <span className='border-r-1 border-white absolute bottom-8 right-8 w-10 h-50'></span>
     </div>
   );
 };
