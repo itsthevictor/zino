@@ -17,12 +17,12 @@ const Navbar = ({ authData }) => {
   };
 
   return (
-    <nav className='flex justify-between  bg-transparent p-8 fixed top-0 left-0 right-0 z-50 text-white font-oxanium'>
+    <nav className='flex justify-between items-start  bg-transparent p-8 fixed top-0 left-0 right-0 z-50 text-white font-oxanium'>
       <div className='ml-1'>
         <Logo />
       </div>
       <div className='flex justify-between items-center'>
-        <div className='hidden md:flex gap-12 text-sm'>
+        <div className='hidden md:flex gap-12 text-sm mr-0.5'>
           <Link to='/'>home</Link>
           <Link to='/about'>about</Link>
           <Link to='/contact'>contact</Link>
