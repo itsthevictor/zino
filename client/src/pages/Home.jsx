@@ -1,52 +1,75 @@
 import SearchBar from '../components/SearchBar';
 import { useEffect, useState } from 'react';
-import Wrapper from '../assets/Wrappers/SearchBar';
+
+// Helper function to convert decimal degrees to DMS format
+const toDMS = (decimal) => {
+  if (decimal === null || decimal === undefined || isNaN(decimal)) {
+    return 'Invalid value';
+  }
+  const degrees = Math.floor(decimal);
+  const minutesDecimal = Math.abs((decimal - degrees) * 60);
+  const minutes = Math.floor(minutesDecimal);
+  const seconds = Math.round((minutesDecimal - minutes) * 60);
+  return `${degrees}° ${minutes}' ${seconds}"`;
+};
+
 const Home = () => {
-  const [position, setPosition] = useState({ lat: '', long: '' });
+  const [position, setPosition] = useState({
+    lat: 'Fetching...',
+    long: 'Fetching...',
+  });
 
   const time = new Date().toLocaleTimeString([], {
     hour: '2-digit',
     minute: '2-digit',
+    hour12: true,
   });
-  const date = new Date().toLocaleDateString([], {
-    month: '2-digit',
-    day: '2-digit',
+  const date = new Date().toLocaleDateString('ro-RO', {
+    day: 'numeric',
+    month: 'long',
     year: 'numeric',
   });
 
   useEffect(() => {
-    const geo = navigator.geolocation.getCurrentPosition(
+    navigator.geolocation.getCurrentPosition(
       (position) => {
-        setPosition({
-          lat: position.coords.latitude,
-          long: position.coords.longitude,
-        });
+        const latDMS = toDMS(position.coords.latitude);
+        const longDMS = toDMS(position.coords.longitude);
+        console.log('New position in DMS:', { lat: latDMS, long: longDMS }); // Debugging
+        setPosition({ lat: `${latDMS} N`, long: `${longDMS} E` });
       },
       (error) => {
         console.error(error);
+        setPosition({
+          lat: 'Error fetching latitude',
+          long: 'Error fetching longitude',
+        });
       },
       { enableHighAccuracy: true }
     );
   }, []);
 
   return (
-    <Wrapper>
-      <div className='landing-container'>
-        <div className='wrapper'>
-          <div className='title'>What are we doing this weekend?</div>
-          <SearchBar />
-          <span className='geo'>{`${position.lat} ${position.long}`}</span>
-          <span className='date'>{date}</span>
-          <div className='bottom'>
-            <span className='left'></span>
-            <div className='time'>
-              <span>{time}</span>
-            </div>
-            <span className='right'></span>
-          </div>
+    <div className="grid place-items-center h-screen w-screen  p-6  font-oxanium text-white  bg-black/10  bg-[url('https://res.cloudinary.com/dgp67jheg/image/upload/v1744192852/zno/cropped_igdxfn.jpg')] bg-blend-overlay bg-cover bg-no-repeat bg-top  ">
+      <div className='border-1 w-full h-full border-transparent flex flex-col items-center justify-center '>
+        <div className='text-7xl  -mt-10 text-wrap text-center'>
+          What are we <span className=' text-orange-500'>doing </span> <br />{' '}
+          this weekend?
         </div>
+        <SearchBar />
       </div>
-    </Wrapper>
+      <span className='absolute left-0 rotate-270 -ml-11 text-xs'>
+        {position.lat && position.lat}, {position.long && position.long}
+      </span>
+      <span className='absolute right-55 bottom-5 text-xs uppercase'>
+        {time}
+      </span>
+      <span className='absolute right-0 rotate-90 capitalize text-xs -mr-2 top-96'>
+        {date}
+      </span>
+      <span className='border-b-1 border-l-1 border-white absolute bottom-6 left-6 w-40 h-10'></span>
+      <span className='border-b-1 border-r-1 border-white absolute bottom-6 right-6 w-10 h-50'></span>
+    </div>
   );
 };
 export default Home;

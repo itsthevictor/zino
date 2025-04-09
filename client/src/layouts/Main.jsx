@@ -5,13 +5,14 @@ import { mainFetch } from '../utils/customFetch';
 
 export const initialLoader = async () => {
   let authData = {};
-  try {
-    const response = await mainFetch('/users/current-user');
-    authData = { ...authData, response };
-    return response.data;
-  } catch (error) {
-    return authData;
-  }
+  return authData;
+  // try {
+  //   const response = await mainFetch('/users/current-user');
+  //   authData = { ...authData, response };
+  //   return response.data;
+  // } catch (error) {
+  //   return authData;
+  // }
 };
 
 const Main = () => {

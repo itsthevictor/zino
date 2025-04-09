@@ -1,5 +1,5 @@
 import { Form, Link, redirect } from 'react-router-dom';
-import Wrapper from '../assets/Wrappers/Login';
+
 import { mainFetch } from '../utils/customFetch.js';
 import { toast } from 'react-toastify';
 import Logo from '../components/Logo';
@@ -21,55 +21,52 @@ export async function registerAction({ request }) {
 
 const Register = () => {
   return (
-    <Wrapper>
-      {' '}
-      <div className='container'>
-        <div className='form-container'>
-          <Form method='post'>
-            <Logo />
-            <div className='input-item'>
-              <label htmlFor='firstName'>Prenume</label>
-              <input
-                type='text'
-                id='firstName'
-                placeholder='first name'
-                name='firstName'
-              />
-            </div>
-            <div className='input-item'>
-              <label htmlFor='lastName'>Nume</label>
-              <input
-                type='text'
-                id='lastName'
-                placeholder='last name'
-                name='lastName'
-              />
-            </div>
-            <div className='input-item'>
-              <label htmlFor='email'>email </label>
-              <input type='email' id='email' placeholder='email' name='email' />
-            </div>
-            <div className='input-item'>
-              <label htmlFor='password'>parola</label>
-              <input
-                type='password '
-                id='password'
-                placeholder='password'
-                name='password'
-              />
-              <p></p>
-            </div>
-            <button type='submit' className='submit-btn'>
-              Continuă
-            </button>
-            <p>
-              {' '}
-              Ai deja cont? <Link to='/signin'> Intră în cont</Link>
-            </p>
-          </Form>
-        </div>
+    <div className='container'>
+      <div className='form-container'>
+        <Form method='post'>
+          <Logo />
+          <div className='input-item'>
+            <label htmlFor='firstName'>Prenume</label>
+            <input
+              type='text'
+              id='firstName'
+              placeholder='first name'
+              name='firstName'
+            />
+          </div>
+          <div className='input-item'>
+            <label htmlFor='lastName'>Nume</label>
+            <input
+              type='text'
+              id='lastName'
+              placeholder='last name'
+              name='lastName'
+            />
+          </div>
+          <div className='input-item'>
+            <label htmlFor='email'>email </label>
+            <input type='email' id='email' placeholder='email' name='email' />
+          </div>
+          <div className='input-item'>
+            <label htmlFor='password'>parola</label>
+            <input
+              type='password '
+              id='password'
+              placeholder='password'
+              name='password'
+            />
+            <p></p>
+          </div>
+          <button type='submit' className='submit-btn'>
+            Continuă
+          </button>
+          <p>
+            {' '}
+            Ai deja cont? <Link to='/signin'> Intră în cont</Link>
+          </p>
+        </Form>
       </div>
-    </Wrapper>
+    </div>
   );
 };
 export default Register;

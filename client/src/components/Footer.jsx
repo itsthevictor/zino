@@ -1,15 +1,12 @@
-import Wrapper from "../assets/Wrappers/Footer";
-
 const Footer = () => {
   return (
-    <Wrapper>
-      <div className="footer">
-        <div className="container">
-          <div className="content">
-            {" "}
-            <p>
-              {" "}
-              {/* footer footer footer footer footer footer footer footer footer
+    <div className='footer'>
+      <div className='container'>
+        <div className='content'>
+          {' '}
+          <p>
+            {' '}
+            {/* footer footer footer footer footer footer footer footer footer
               footer footer footer footer footer footer footer footer footer
               footer footer footer footer footer footer footer footer footer
               footer footer footer footer footer footer footer footer footer
@@ -17,11 +14,10 @@ const Footer = () => {
               footer footer footer footer footer footer footer footer footer
               footer footer footer footer footer footer footer footer footer
               footer footer footer footer footer footer footer footer footer */}
-            </p>
-          </div>
+          </p>
         </div>
       </div>
-    </Wrapper>
+    </div>
   );
 };
 export default Footer;

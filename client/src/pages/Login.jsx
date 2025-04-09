@@ -1,5 +1,5 @@
 import { Form, Link, redirect } from 'react-router-dom';
-import Wrapper from '../assets/Wrappers/Login';
+
 import { mainFetch } from '../utils/customFetch.js';
 import { toast } from 'react-toastify';
 import Logo from '../components/Logo.jsx';
@@ -21,43 +21,40 @@ export async function loginAction({ request }) {
 
 const Login = () => {
   return (
-    <Wrapper>
-      {' '}
-      <div className='container'>
-        <div className='form-container'>
-          <Form method='post'>
-            <h3>
-              {' '}
-              <Logo />
-            </h3>
+    <div className='container'>
+      <div className='form-container'>
+        <Form method='post'>
+          <h3>
+            {' '}
+            <Logo />
+          </h3>
 
-            <div className='input-item'>
-              <label htmlFor='email'>email</label>
-              <input type='email' id='email' name='email' />
-            </div>
-            <div className='input-item'>
-              <label htmlFor='password'>Parola</label>
-              <input
-                type='password '
-                id='password'
-                // placeholder="parola"
-                name='password'
-              />
-              <p>
-                <Link to='reset-password'>Ai uitat parola?</Link>
-              </p>
-            </div>
-            <button type='submit' className='submit-btn'>
-              Continuă
-            </button>
+          <div className='input-item'>
+            <label htmlFor='email'>email</label>
+            <input type='email' id='email' name='email' />
+          </div>
+          <div className='input-item'>
+            <label htmlFor='password'>Parola</label>
+            <input
+              type='password '
+              id='password'
+              // placeholder="parola"
+              name='password'
+            />
             <p>
-              {' '}
-              Nu ai cont? <Link to='/signup'>Înregistrează-te</Link>
+              <Link to='reset-password'>Ai uitat parola?</Link>
             </p>
-          </Form>
-        </div>
+          </div>
+          <button type='submit' className='submit-btn'>
+            Continuă
+          </button>
+          <p>
+            {' '}
+            Nu ai cont? <Link to='/signup'>Înregistrează-te</Link>
+          </p>
+        </Form>
       </div>
-    </Wrapper>
+    </div>
   );
 };
 export default Login;

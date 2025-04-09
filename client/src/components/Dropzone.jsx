@@ -1,10 +1,10 @@
-import { useCallback, useState } from "react";
-import { useDropzone } from "react-dropzone";
-import Wrapper from "../assets/Wrappers/Dropzone";
-import { HiMiniXMark } from "react-icons/hi2";
-import { PreviewImage } from "../components";
-import { AddListingContext } from "../contexts/addListingContext";
-import { useContext } from "react";
+import { useCallback, useState } from 'react';
+import { useDropzone } from 'react-dropzone';
+
+import { HiMiniXMark } from 'react-icons/hi2';
+import { PreviewImage } from '../components';
+import { AddListingContext } from '../contexts/addListingContext';
+import { useContext } from 'react';
 const Dropzone = () => {
   const {
     files,
@@ -34,16 +34,16 @@ const Dropzone = () => {
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
     accept: {
-      "image/*": [],
+      'image/*': [],
     },
     maxSize: 1024 * 1000,
   });
 
   return (
-    <Wrapper>
+    <>
       <div
         {...getRootProps()}
-        className={isDragActive ? "drag-area active" : "drag-area"}
+        className={isDragActive ? 'drag-area active' : 'drag-area'}
       >
         <input {...getInputProps()} />
         {isDragActive ? (
@@ -56,10 +56,10 @@ const Dropzone = () => {
         )}
       </div>
       {files.length >= 1 && (
-        <div className="accepted-files-container">
-          {" "}
-          <label htmlFor="accepted-files-list">Fișiere acceptate</label>
-          <ul id="accepted-files-list">
+        <div className='accepted-files-container'>
+          {' '}
+          <label htmlFor='accepted-files-list'>Fișiere acceptate</label>
+          <ul id='accepted-files-list'>
             {files.map((file) => (
               <li key={file.name}>
                 <PreviewImage
@@ -68,7 +68,7 @@ const Dropzone = () => {
                   height={100}
                   onLoad={() => URL.revokeObjectURL(file.preview)}
                 />
-                <button type="button" onClick={() => removeFile(file.name)}>
+                <button type='button' onClick={() => removeFile(file.name)}>
                   <HiMiniXMark size={20} />
                 </button>
               </li>
@@ -78,15 +78,15 @@ const Dropzone = () => {
       )}
 
       {rejectedFiles.length >= 1 && (
-        <div className="rejected-files">
-          <label htmlFor="rejected-files-list">Fișiere respinse</label>
-          <ul id="rejected-files-list" className="rejected-files-list">
+        <div className='rejected-files'>
+          <label htmlFor='rejected-files-list'>Fișiere respinse</label>
+          <ul id='rejected-files-list' className='rejected-files-list'>
             {rejectedFiles.map(({ file, errors, i }) => (
               <li key={i}>
                 <div>
-                  <p className="file-name">{file.name}</p>
+                  <p className='file-name'>{file.name}</p>
                 </div>
-                <ul className="errors-list">
+                <ul className='errors-list'>
                   {errors.map((error) => (
                     <li key={error.message}>{error.message}</li>
                   ))}
@@ -96,7 +96,7 @@ const Dropzone = () => {
           </ul>
         </div>
       )}
-    </Wrapper>
+    </>
   );
 };
 export default Dropzone;
