@@ -9,7 +9,7 @@ const SearchBar = () => {
       <Form method='post' className='flex mt-15' action='/search'>
         <input
           type='text'
-          className='bg-white py-3  px-4 placeholder-shown .placeholder-gray-200  text-gray-500 w-70'
+          className='bg-white py-3  px-4 placeholder-shown .placeholder-gray-200 focus:outline-none text-gray-500 w-70'
           placeholder='search for a place or an activity...'
           style={{
             clipPath: 'polygon(4% 0, 100% 0, 100% 100%, 0 100%, 0 28%)',
