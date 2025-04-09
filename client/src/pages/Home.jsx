@@ -50,7 +50,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="grid place-items-center h-screen w-screen  p-8   font-oxanium text-white  bg-black/13  bg-[url('https://res.cloudinary.com/dgp67jheg/image/upload/v1744192852/zno/cropped_igdxfn.jpg')] bg-blend-overlay bg-cover bg-no-repeat bg-top  ">
+    <div className="grid place-items-center h-screen w-screen  p-8   font-oxanium text-white  bg-black/15  bg-[url('https://res.cloudinary.com/dgp67jheg/image/upload/v1744192852/zno/cropped_igdxfn.jpg')] bg-blend-overlay bg-cover bg-no-repeat bg-top  ">
       <div className='border-1 w-full h-full border-transparent flex flex-col items-center justify-center '>
         <div className='text-7xl  -mt-10 text-wrap text-center'>
           What are we <span className=' text-orange-500'>doing </span> <br />{' '}
