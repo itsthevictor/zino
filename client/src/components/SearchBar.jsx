@@ -22,7 +22,7 @@ const SearchBar = () => {
             clipPath: 'polygon(0 0, 100% 0, 100% 75%, 80% 100%, 0 100%)',
           }}
         >
-          <MdArrowForward size={24} />
+          <MdArrowForward size={26} />
         </button>
       </Form>
     </div>
