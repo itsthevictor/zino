@@ -18,17 +18,37 @@ const Home = () => {
     lat: 'Fetching...',
     long: 'Fetching...',
   });
+  const [time, setTime] = useState(
+    new Date().toLocaleTimeString([], {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true,
+    })
+  );
 
-  const time = new Date().toLocaleTimeString([], {
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true,
-  });
   const date = new Date().toLocaleDateString('ro-RO', {
     day: 'numeric',
     month: 'long',
     year: 'numeric',
   });
+
+  useEffect(() => {
+    // Update time every second
+    const interval = setInterval(() => {
+      setTime(
+        new Date().toLocaleTimeString([], {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: true,
+        })
+      );
+    }, 1000);
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(
@@ -72,4 +92,5 @@ const Home = () => {
     </div>
   );
 };
+
 export default Home;
