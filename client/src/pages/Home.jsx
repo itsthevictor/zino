@@ -15,8 +15,8 @@ const toDMS = (decimal) => {
 
 const Home = () => {
   const [position, setPosition] = useState({
-    lat: 'Fetching...',
-    long: 'Fetching...',
+    lat: `45° 38' 28" N`,
+    long: `25° 37' 54" E`,
   });
   const [time, setTime] = useState(
     new Date().toLocaleTimeString([], {
@@ -70,7 +70,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="grid place-items-center h-screen w-screen  p-8   font-oxanium text-white  bg-black/15  bg-[url('https://res.cloudinary.com/dgp67jheg/image/upload/v1744192852/zno/cropped_igdxfn.jpg')] bg-blend-overlay bg-cover bg-no-repeat bg-top  ">
+    <div className="grid place-items-center h-screen w-screen  p-8   font-oxanium text-white  bg-black/15  bg-[url('https://res.cloudinary.com/dgp67jheg/image/upload/v1744270272/zno/52952687126_e80ea88507_c_hyjscz.jpg')] bg-blend-overlay bg-cover bg-no-repeat bg-top  ">
       <div className='border-1 w-full h-full border-transparent flex flex-col items-center justify-center '>
         <div className='text-7xl  -mt-10 text-wrap text-center'>
           What are we <span className=' text-orange-500'>doing </span> <br />{' '}
@@ -81,10 +81,10 @@ const Home = () => {
       <span className='absolute left-0 rotate-270 -ml-9 text-xs'>
         {position.lat && position.lat}, {position.long && position.long}
       </span>
-      <span className='absolute right-76 bottom-7 text-xs uppercase'>
+      <span className='absolute right-25/100 bottom-7 text-xs uppercase'>
         {time}
       </span>
-      <span className='absolute right-0 rotate-90 capitalize text-xs  top-75'>
+      <span className='absolute right-0 top-4/10 rotate-90 capitalize text-xs -mr-0.5 )'>
         {date}
       </span>
       <span className='border-b-1 border-l-1 border-white absolute bottom-8 left-8 w-30 h-10'></span>

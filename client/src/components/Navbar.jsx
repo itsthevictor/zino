@@ -19,23 +19,34 @@ const Navbar = ({ authData }) => {
   return (
     <nav className='flex justify-between items-start  bg-transparent p-7 fixed top-0 left-0 right-0 z-50 text-white font-oxanium'>
       <div className='ml-1'>
-        <Logo />
+        <Link to='/'>
+          {' '}
+          <Logo />
+        </Link>
       </div>
       <div className='flex justify-between items-center'>
-        <div className='hidden md:flex gap-12 text-sm mr-1.5'>
-          <Link to='/'>home</Link>
-          <Link to='/about'>about</Link>
-          <Link to='/contact'>contact</Link>
+        <div className='hidden md:flex gap-12 text-sm mr-1.5  '>
+          <Link to='/' className='hover:text-orange-500 font-semibold'>
+            home
+          </Link>
+          <Link to='/about' className='hover:text-orange-500 font-semibold'>
+            about
+          </Link>
+          <Link to='/contact' className='hover:text-orange-500 font-semibold'>
+            contact
+          </Link>
           {authData?.user ? (
             <button
-              className='flex items-center gap-4'
+              className='flex items-center gap-4 hover:text-orange-500 font-semibold'
               onClick={handleLogoutBtn}
             >
               logout
               <HiMiniUserCircle size={20} />
             </button>
           ) : (
-            <Link to='/login'>login</Link>
+            <Link to='/login' className='hover:text-orange-500 font-semibold'>
+              login
+            </Link>
           )}
         </div>
         <div className='md:hidden'>
