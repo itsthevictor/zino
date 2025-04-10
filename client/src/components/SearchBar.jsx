@@ -15,7 +15,6 @@ const SearchBar = () => {
             clipPath: 'polygon(4% 0, 100% 0, 100% 100%, 0 100%, 0 28%)',
           }}
         />
-        {/* <button type='submit' className='bg-orange-500 px-3 py-2'> */}
         <button
           className='bg-orange-500  text-white font-bold py-2 px-4 hover:bg-orange-400 cursor-pointer'
           style={{
